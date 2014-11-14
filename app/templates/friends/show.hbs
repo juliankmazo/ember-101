@@ -1,0 +1,7 @@
+<h1><span class="glyphicon glyphicon-user"></span>{{firstName}} <small>{{lastName}}</small></h1>
+<ul class="list-inline">
+	<li>Email: {{email}}</li>
+	<li>Twitter: {{twitter}}</li>
+	<li>{{link-to '<span class="glyphicon glyphicon-edit"></span>' 'friends.edit' this}}</li>
+	<li><a href="#" {{action 'delete' this}}><span class="glyphicon glyphicon-trash"></span></a></li>
+</ul>

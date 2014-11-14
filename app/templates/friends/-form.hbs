@@ -1,32 +1,29 @@
-<div class="row">
-	<div class="col-md-6">
-		<h2>Friend details</h2>
-		<p>{{firstName}} {{lastName}}</p>
-	</div>
-</div>
-
 <form {{action "save" on="submit"}} role="form">
-	<div class="form-group" {{bind-attr class="classError"}}>
-		<label for="firsName" class="control-label">First Name: {{errorMessage}}</label>
-		{{input value=firstName class="form-control" id="firstName" placeholder="Enter your first name"}}
-	</div>
-	<div class="form-group">
-		<label for="lastName">Last Name: </label>
-		{{input value=lastName class="form-control" id="lastName" placeholder="Enter your last name"}}
-	</div>
-	<div class="form-group">
-		<label for="email">Email: </label>
-		{{input value=email class="form-control" id="email" placeholder="Enter your email" type="email"}}
-	</div>
-	<div class="form-group">
-		<label for="twitter">Twitter</label>
-		{{input value=twitter class="form-control" id="twitter" placeholder="Enter your fucking twitter"}}
-	</div>
-	<div class="checkbox">
-		<label>
-			{{input type="checkbox" name=trusted}}
-		</label>
-	</div>
+
+	<h2>{{errorMessage}}</h2>
+	<fieldset>
+		<div class="form-group" {{bind-attr class="classError"}}>
+			<label for="firsName" class="control-label">First Name:</label>
+			{{input value=firstName class="form-control" id="firstName" placeholder="Enter your first name"}}
+		</div>
+
+		<div class="form-group" {{bind-attr class="classError"}}>
+			<label for="lastName" class="control-label">Last Name: </label>
+			{{input value=lastName class="form-control" id="lastName" placeholder="Enter your last name"}}
+		</div>
+
+		<div class="form-group" {{bind-attr class="classError"}}>
+			<label for="email" class="control-label">Email: </label>
+			{{input value=email class="form-control" id="email" placeholder="Enter your email" type="email"}}
+		</div>
+
+		<div class="form-group" {{bind-attr class="classError"}}>
+			<label for="twitter" class="control-label">Twitter</label>
+			{{input value=twitter class="form-control" id="twitter" placeholder="Enter your fucking twitter"}}
+		</div>
+	</fieldset>
+
 	<button type="submit" class="btn btn-default">Save</button>
 	<button {{action "cancel"}} class="btn btn-danger">Cancel</button>
+
 </form>

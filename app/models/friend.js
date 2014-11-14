@@ -2,6 +2,7 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.Model.extend({
+  articles: DS.hasMany('articles'),
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
   email: DS.attr('string'),
@@ -10,7 +11,4 @@ export default DS.Model.extend({
   fullName: Ember.computed('firstName', 'lastName', function() {
   	return this.get('firstName')+' '+this.get('lastName');
   })
-  // fullName: function() {
-  //   return this.get('firstName')+' '+this.get('lastName');
-  // }.property('firstName', 'lastName')
 });

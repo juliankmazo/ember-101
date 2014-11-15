@@ -11,7 +11,7 @@
 			<tbody>
 				{{#each friend in this}}
 					<tr>
-						<th>{{link-to friend.fullName 'friends.show' friend class="text-muted"}}</th>
+						<th>{{link-to friend.fullName 'articles' friend class="text-muted"}}</th>
 						<th>{{totalArticles}}</th>
 						<th><a href="#" {{action 'delete' friend}}><span class="glyphicon glyphicon-trash"></span></a></th>
 					</tr>

@@ -1,12 +1,12 @@
 <form role="form">
 	<h2>{{errorMessage}}</h2>
 	<fieldset>
-		<div class="form-group">
-			<label for="description">Description</label>
-			{{input value=description placeholder="Description" class="form-control" id="notes"}}
+		<div class="form-group" {{bind-attr class="classError" }}>
+			<label for="description" class="control-label">Description</label>
+			{{input value=description placeholder="Description" class="form-control" id="description"}}
 		</div>
-		<div class="form-group">
-			<label for="notes">Notes</label>
+		<div class="form-group" {{bind-attr class="classError" }}>
+			<label for="notes" class="control-label">Notes</label>
 			{{input value=notes placeholder="Notes" class="form-control" id="notes"}}
 		</div>
 		<button class="btn btn-success" {{action "save"}}>Save</button>
